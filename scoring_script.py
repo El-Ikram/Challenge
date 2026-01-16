@@ -8,10 +8,10 @@ submission_file = sys . argv [1]
 truth_file = sys.argv[2]
 
 #Load submission
-submission = pd . read_csv ( submission_file )
+submission = pd.read_csv( submission_file )
 
 12 # Load ground truth ( hidden )
 truth = pd.read_csv(truth_file)
 # Compute F1 score
-score = f1_score(truth["label"], submission["predicted_label"], average="macro")
-print ( f'Submission F1 Score : { score :.4f}')
+score = f1_score(truth["label"], submission["label"], average="macro")
+print(f"SCORE={score:.4f}")
