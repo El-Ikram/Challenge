@@ -19,25 +19,33 @@ jobs:
         with:
           python-version: "3.10"
 
-      # 3️⃣ Install dependencies in correct order
+      # 3️⃣ Install minimal dependencies
       - name: Install dependencies
         run: |
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install torch_geometric
-          pip install pandas scikit-learn -r starter_code/requirements.txt
+          python -m pip install --upgrade pip
+          pip install pandas scikit-learn
 
       # 4️⃣ Create hidden ground truth CSV from secret
       - name: Create hidden test labels
-        run: echo "${{ secrets.TESTREAL }}" > ground_truth.csv
+        run: |
+          echo "${{ secrets.TESTREAL }}" > ground_truth.csv
+          echo "Ground truth first line:"
+          head -1 ground_truth.csv
 
-      # 5️⃣ Run scoring for each submission CSV
+      # 5️⃣ Debug - list files
+      - name: List files
+        run: ls -la
+
+      # 6️⃣ Run scoring for each submission CSV
       - name: Run scoring
         run: |
+          echo "Files in submissions/:"
+          ls submissions/
           for file in submissions/*.csv; do
             echo "Scoring $file"
             python scoring_script.py "$file" ground_truth.csv
           done
 
-      # 6️⃣ Update leaderboard
+      # 7️⃣ Update leaderboard
       - name: Update leaderboard
         run: python update_leaderboard.py
