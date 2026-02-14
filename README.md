@@ -101,12 +101,7 @@ Build a GNN that can navigate the noise and make accurate predictions by:
 2. **Learning when to trust** neighborhood aggregation
 3. **Build** robust GNNs can detect anomalies or corrupted signals — similar to spotting a misbehaving cell in a tumor.
 ## Evaluation Metrics
-Your submissions will be evaluated on the test set using three metrics:
-
-1. **Accuracy** - Overall classification correctness
-2. **F1-Score (Macro)** - Balanced performance across all classes
-3. **Precision (Macro)** - Quality of positive predictions
-
+Your submissions will be evaluated on the test set using the overall classification correctness 
 
 ## 🏆 Winning Criteria
 The winner will be determined by the submission that achieves the best average rank across all three metrics.
