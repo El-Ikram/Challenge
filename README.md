@@ -11,7 +11,7 @@ For most neural networks, classification tasks are made individually based on th
 
 ### 💡 The Core Question
 
-**This raises an important question: what should a model do when there is a contradiction between the information provided by a node's embedding and the information coming from its neighborhood? AKA adversary learning**
+**This raises an important question: what should a model do when there is a contradiction between the information provided by a node's embedding and the information coming from its neighborhood? aka adversary learning**
 
 ---
 ![Alt text](picture.png)
@@ -48,10 +48,9 @@ You can read more about this data source on https://ngdc.cncb.ac.cn/cancerscem/i
 As for this task, we have altered samples from this data to present it for a  GNN training tasks, you will be given:
 
 ### 🔗 **A (Adjacency Matrix)**
-- **Absolute truth** ✓
-- Contains information about the connections and structure of your input graph
-- This is your reliable source for understanding interractions between the cells , you are encouraged to read about cancer cells behavior for a better solution!
-
+- Encodes the connections and structure of your input graph.
+- Most connections reflect real interactions between cells, but some edges may have been altered, introducing noise.
+  
 ### 📈 **X (Node Embeddings)**
 - Embeddings of nodes == Genes encodings
 - ⚠️ **Some nodes have been corrupted to trick you!**
@@ -87,7 +86,7 @@ Please review the baseline code to help you better navigate the data.
 - Design custom aggregation functions
 - Use attention mechanisms
 - Combine multiple GNN layers strategically
-- Look up additional resources to understand the bahavior of the cancerous cells.
+- Look up additional resources to understand the behavior of the cancerous cells.
 ---
 
 ##  Your Mission ✨✨
@@ -131,5 +130,4 @@ Cancer Single-cell Expression Map
 Graph Neural Networks in Cancer and Oncology Research: Emerging and Future Trends Grigoriy Gogoshin 1,*, Andrei S Rodin 1,
 
 ---
-PS: the code used to create the challenge dataset is defined in challenge_data notebook , as a participants please ignore it.
 
