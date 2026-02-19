@@ -61,6 +61,7 @@ As for this task, we have altered samples from this data to present it for a  GN
 - Gives you a hint about which nodes have been corrupted
 - Available in `train.csv`
 - **NOT available in `test.csv`** (this is what you need to test on)
+- The corruption mask may be used only during training to modulate aggregation, weighting, or attention — not to filter nodes or labels.
 
 ### 📁 **Data Files**
 - **`train.npz`** - Contains features AND corruption mask.
