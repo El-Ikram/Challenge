@@ -106,6 +106,7 @@ Your submissions will be evaluated on the test set using the overall classificat
 
 ## 🏆 Winning Criteria
 The winner will be determined by the submission that achieves the best classification accuracy .
+Check the leaderboard to see other's rankings : https://noormajdoub.github.io/Challenge/ ✨✨
 ###  Submission Process
 
 1. Fork this repository
