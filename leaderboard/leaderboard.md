@@ -2,6 +2,7 @@
 |------|-------|
 | submission_gururgg | 0.9957 |
 | submission_sanae | 0.9872 |
+| submission_samuel | 0.9840 |
 | submission_emmanuel_owusu | 0.9606 |
 | submission_faranbutt | 0.7606 |
 | submission_peguy | 0.7266 |
